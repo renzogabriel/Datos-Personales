@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Renzo Gabriel Cruz Coronel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: The application is structured as a single-page interactive CV using a tabbed navigation system. This design allows the user (recruiter) to easily switch between key sections (Resumen, Experiencia, Educación, Habilidades) without scrolling, providing a clean and focused user experience. This approach enhances the readability and organization of the CV content, making it highly scannable. -->
+    <!-- Visualization & Content Choices: 
+        - Report Info: Personal data -> Goal: Inform -> Presentation: Header with contact info. -> Interaction: None -> Justification: Ensures contact details are immediately visible and accessible. Method: HTML/CSS.
+        - Report Info: Career Summary, Experience, Education, Skills -> Goal: Organize/Inform -> Presentation: Tabbed content sections -> Interaction: Clickable tabs to show/hide content panels -> Justification: Prevents information overload and provides a clear, controlled path for exploring the candidate's profile. Method: HTML/CSS/JS.
+        - Report Info: Job responsibilities -> Goal: Inform -> Presentation: Bullet points -> Interaction: None -> Justification: A standard, effective format for listing duties and achievements clearly. Method: HTML/CSS.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-btn.active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="text-slate-700 antialiased">
+    <div class="container mx-auto max-w-4xl p-4 sm:p-6 md:p-8">
+        <main class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <header class="bg-slate-800 text-white p-8 text-center">
+                <h1 class="text-4xl font-bold tracking-tight">RENZO GABRIEL CRUZ CORONEL</h1>
+                <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mt-4 text-slate-300">
+                    <span class="whitespace-nowrap">📞 094 73 2600 - 093 76 3532</span>
+                    <span class="whitespace-nowrap">✉️ renzogabrielcruz@icloud.com</span>
+                    <span class="whitespace-nowrap">📍 José G. Amorín 833 - Salto, Uy.</span>
+                </div>
+            </header>
+
+            <div class="p-6 md:p-8">
+                <div class="border-b border-slate-200 mb-6">
+                    <nav class="-mb-px flex flex-wrap justify-center gap-x-4 sm:gap-x-6" aria-label="Tabs">
+                        <button class="tab-btn active text-slate-500 hover:text-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm sm:text-base border-transparent transition-colors duration-200" data-tab="resumen">Resumen</button>
+                        <button class="tab-btn text-slate-500 hover:text-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm sm:text-base border-transparent transition-colors duration-200" data-tab="experiencia">Experiencia</button>
+                        <button class="tab-btn text-slate-500 hover:text-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm sm:text-base border-transparent transition-colors duration-200" data-tab="educacion">Educación</button>
+                        <button class="tab-btn text-slate-500 hover:text-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm sm:text-base border-transparent transition-colors duration-200" data-tab="habilidades">Habilidades</button>
+                    </nav>
+                </div>
+
+                <div id="tab-container" class="min-h-[300px]">
+                    <div id="resumen" class="tab-content active animate-fade-in">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-4">Resumen Profesional</h2>
+                        <p class="text-lg leading-relaxed text-slate-600">
+                            Sólido compromiso con el servicio al cliente y un alto grado de empatía, experiencia en administración y atención al cliente. Mi objetivo es aplicar mi habilidad para manejar situaciones difíciles con sensibilidad.
+                        </p>
+                    </div>
+
+                    <div id="experiencia" class="tab-content animate-fade-in">
+                         <h2 class="text-2xl font-bold text-slate-800 mb-6">Experiencia Laboral</h2>
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-xl font-semibold text-slate-900">Empresa Personal de Transporte de Pasajeros</h3>
+                                <p class="text-slate-500 mb-2">Fecha de Inicio 06 / 2016 - 02 / 2025</p>
+                                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                                    <li>Resolví consultas y gestioné solicitudes con discreción y profesionalidad.</li>
+                                    <li>Gestioné tareas administrativas y operativas, demostrando una gran capacidad para la organización y la atención a los detalles.</li>
+                                    <li>Puntualidad y responsabilidad.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-slate-900">Agente de Tránsito | Intendencia de Salto</h3>
+                                <p class="text-slate-500 mb-2">Fecha de Inicio 06 / 2006 - 05 / 2016</p>
+                                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                                    <li>Coordiné la logística y los horarios del equipo, garantizando la puntualidad y la eficiencia.</li>
+                                    <li>Manejé documentación confidencial, asegurando la privacidad y el cumplimiento de los protocolos de la comuna.</li>
+                                    <li>Trabajé en un entorno de alta presión, manteniendo la calma y la compostura para cumplir de manera correcta con la función.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="educacion" class="tab-content animate-fade-in">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6">Educación</h2>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-slate-50 rounded-lg">
+                                <h3 class="font-semibold text-slate-900">Ingeniería en Telecomunicaciones (IT)</h3>
+                                <p class="text-slate-600">CTC Salto (ORT) | (Incompleto) 2002 - 2005</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg">
+                                <h3 class="font-semibold text-slate-900">Auxiliar Administrativo Contable</h3>
+                                <p class="text-slate-600">Instituto C.L.I.E. | 09 / 2006</p>
+                            </div>
+                             <div class="p-4 bg-slate-50 rounded-lg">
+                                <h3 class="font-semibold text-slate-900">Formación Adicional</h3>
+                                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                                  <li>Mantenimiento y Reparación de PC.</li>
+                                  <li>Manejo de Sistemas Operativos Windows y Linux.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="habilidades" class="tab-content animate-fade-in">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6">Habilidades</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-3">Habilidades Principales</h3>
+                                <ul class="space-y-2 text-slate-600">
+                                    <li class="flex items-start"><span class="mr-2 mt-1 text-blue-500">●</span><span><strong>Empatía, discreción y confidencialidad:</strong> Manejo de información personal y sensible con la máxima discreción.</span></li>
+                                    <li class="flex items-start"><span class="mr-2 mt-1 text-blue-500">●</span><span><strong>Buena comunicación interpersonal:</strong> Habilidad para escuchar y transmitir información de forma clara y serena.</span></li>
+                                    <li class="flex items-start"><span class="mr-2 mt-1 text-blue-500">●</span><span><strong>Amplia capacidad analítica y de organización:</strong> Planificación y ejecución de tareas de forma metódica y eficiente.</span></li>
+                                </ul>
+                            </div>
+                             <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-3">Adicionales</h3>
+                                <ul class="space-y-2 text-slate-600">
+                                    <li class="flex items-start"><span class="mr-2 mt-1 text-blue-500">●</span><span>Manejo de herramientas de Ofimática (Microsoft Office y similares).</span></li>
+                                    <li class="flex items-start"><span class="mr-2 mt-1 text-blue-500">●</span><span>Cursos de Reanimación Cardio - Pulmonar certificado M.S.P.</span></li>
+                                    <li class="flex items-start"><span class="mr-2 mt-1 text-blue-500">●</span><span>Licencia de Conducir - Carné de Salud (Al día).</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetId = tab.dataset.tab;
+                const targetContent = document.getElementById(targetId);
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                tabContents.forEach(content => content.classList.remove('active'));
+                targetContent.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
